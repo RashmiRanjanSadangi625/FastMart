@@ -1,6 +1,6 @@
 import axios from "axios"
 
-export const API_BASE_URL = 'mongodb+srv://admin:admindb@learning.mh6j7.mongodb.net/featuredb?retryWrites=true&w=majority';
+export const API_BASE_URL = 'mongodb+srv://rashmi:ecommerce@ecommerce.4dllk.mongodb.net/?retryWrites=true&w=majority&appName=ecommerce';
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
