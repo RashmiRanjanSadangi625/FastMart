@@ -1,10 +1,23 @@
-const  mongoose  = require("mongoose");
+const { MongoClient, ServerApiVersion } = require('mongodb');
 
-// const mongodbUrl="mongodb+srv://rashmi:ecommerce@cluster0.b24gn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+const uri = "mongodb+srv://rrs:<db_password>@ecommerce.4dllk.mongodb.net/?retryWrites=true&w=majority&appName=ecommerce";
 
-const connectDb = async()=>{
-    return await mongoose.connect("mongodb://localhost:27017/?directConnection=true");
-    // console.log(conn);
-}
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  }
+});
 
-module.exports={connectDb}
+const connectDb = async () => {
+  try {
+    await client.connect();
+    console.log("Connected to MongoDB Atlas successfully!");
+  } catch (error) {
+    console.error("MongoDB Connection Error:", error);
+    process.exit(1); // Exit process on failure
+  }
+};
+
+module.exports = { connectDb, client };
