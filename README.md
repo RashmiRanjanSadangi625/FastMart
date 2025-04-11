@@ -6,14 +6,13 @@ For Users
 🔐 User authentication (Sign up, Login, Logout)
 🛍️ Product browsing, search, and filtering
 🛒 Shopping cart and checkout
-💳 Secure payment integration (Stripe, Razorpay)
+💳 Secure payment integration (Razorpay)
 📦 Order tracking and history
 ⭐ Reviews & Ratings
 
 For Admin
 📊 Sales dashboard
 📦 Product management (Add, Update, Delete)
-📜 Invoice generation
 🔔 Order status updates & customer notifications
 📈 Reports & analytics
 
